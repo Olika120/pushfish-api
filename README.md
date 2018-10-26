@@ -1,9 +1,39 @@
-PushFish API [![License](http://img.shields.io/badge/license-BSD-blue.svg?style=flat)](/LICENSE)
-==================
-This is the core for PushFish. It manages the whole shebang. 
 
+<h1 align="center">
+  <br>
+  <a href="http://www.gitlab.com/PushFish/PushFish-API"><img src="https://user-images.githubusercontent.com/9034013/47518993-25c20880-d895-11e8-9e1f-bed2811fd433.png" alt="PushFish" width="200"></a>
+  <br>
+  PushFish API
+  <br>
+</h1>
+
+<h4 align="center">A self-hosted alternative to services like PushBullet.</h4>
+
+<p align="center">
+  <a href="">
+    <img src="http://img.shields.io/badge/license-BSD-blue.svg?style=flat"
+         alt="License">
+  </a>
+</p>
+
+<p align="center">
+  <a href="#key-features">Key Features</a> •
+  <a href="#how-to-use">How To Use</a> •
+  <a href="#download">Download</a> •
+  <a href="#license">License</a>
+</p>
+
+## Key Features
+
+* Self-Hosted
+  - Host your own instance, be in control of your data.
+* Third-party service free
+  - The API server needs no third-party services to function.
+* Cross platform
+  - Uses Docker, so Windows, macOS and Linux ready.
 
 ## Configuration
+
 The pushfish API server reads various options from a configuration file. This configuration file can be specified by setting the environment variable `PUSHROCKET_CONFIG`. If this variable is not set, then the file is searched for in a default path.
 
 ```
@@ -36,22 +66,40 @@ debug = 1
 
 the format of the database URI is an SQLAlchemy URL as [described here](http://docs.sqlalchemy.org/en/latest/core/engines.html)
 
-Docker
-------------------
-Build the image:
+## How To Use
 
-```
-docker build -t pushfish-api:latest .
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Docker](https://www.docker.com/get-started) installed on your computer. From your command line:
+
+```bash
+# Clone this repository
+$ git clone https://gitlab.com/PushFish/PushFish-API
+
+# Go into the repository
+$ cd PushFish-API
+
+# Build docker
+$ docker build -t pushfish-api:latest .
+
+# Run the app
+$ docker run pushfish-api:latest
 ```
 
-Run:
+## Download
 
-```
-docker run pushfish-api:latest 
-```
+You can [download](https://gitlab.com/PushFish/PushFish-API) the latest version of the PushFish API server for Windows, Linux and MacOS.
 
-Run tests.py:
+## Clients
 
-```
-docker run pushfish-api:latest python tests.py
-```
+* [Android](https://www.gitlab.com/PushFish/PushFish-Android)
+
+* More coming soon
+
+## License
+
+BSD
+
+---
+
+> [push.fish](https://push.fish) &nbsp;&middot;&nbsp;
+> GitLab [@PushFish](https://gitlab.com/PushFish) &nbsp;&middot;&nbsp;
+> GitHub [@PushFish](https://github.com/PushFish)
